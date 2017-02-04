@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_menu_principale"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.michele.ersupal.ui.menu_principale"
+    tools:showIn="@layout/app_bar_menu_principale"
+    android:background="#015287">
+
+    <TextView
+        android:background="#FFFF"
+        android:layout_width="330dp"
+        android:layout_height="115dp"
+        android:id="@+id/textView2"
+        android:layout_marginTop="13dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Costo pasto: 2,10€"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView6"
+        android:layout_marginBottom="21dp"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignStart="@+id/textView5" />
+
+    <TextView
+        android:text="Pasti residui: 3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView5"
+        android:layout_above="@+id/textView6"
+        android:layout_alignStart="@+id/textView4" />
+
+    <TextView
+        android:text="Tessera n°: 656642"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:layout_above="@+id/textView5"
+        android:layout_alignStart="@+id/textView3" />
+
+    <TextView
+        android:text="Bentornato: Michele Cannas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="10dp"
+        android:layout_above="@+id/textView4"
+        android:layout_alignEnd="@+id/textView2" />
+
+    <ImageView
+       android:layout_width="140dp"
+        android:layout_height="140dp"
+        app:srcCompat="@mipmap/cannasuser"
+        android:id="@+id/imageView2"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/textView2" />
+
+    <TextView
+        android:text="Ultima Ricarica: 12/12/2016"
+        android:textColor="#FFFF"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView2"
+        android:layout_alignStart="@+id/imageView2"
+        android:layout_marginTop="38dp"
+        android:id="@+id/textView7"
+        android:layout_alignEnd="@+id/textView2" />
+
+    <Button
+        android:text="Vedi storico ricariche"
+        android:background="@null"
+        android:textAllCaps="false"
+        android:textColor="#ffff"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:id="@+id/vdstoricor"
+        android:layout_below="@+id/textView7"
+        android:layout_alignStart="@+id/textView7" />
+
+    <TextView
+        android:text="Ultimo consumo: Oggi"
+        android:textColor="#FFFF"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vdstoricor"
+        android:layout_alignStart="@+id/vdstoricor"
+        android:layout_marginTop="33dp"
+        android:id="@+id/textView10" />
+
+    <Button
+        android:text="Vedi storico consumi"
+        android:background="@null"
+        android:textAllCaps="false"
+        android:textColor="#ffff"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@+id/textView10"
+        android:layout_alignStart="@+id/textView10"
+        android:id="@+id/vdstoricoc" />
+
+    <ImageView
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        app:srcCompat="@mipmap/addmeal"
+        android:id="@+id/imageView5"
+        android:layout_below="@+id/vdstoricoc"
+        android:layout_alignStart="@+id/vdstoricoc"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="78dp" />
+
+    <ImageView
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        app:srcCompat="@mipmap/usemeal"
+        android:id="@+id/imageView6"
+        android:layout_alignTop="@+id/imageView5"
+        android:layout_toEndOf="@+id/imageView5" />
+
+    <Button
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:background="@null"
+        android:textAllCaps="false"
+        android:id="@+id/addmeall"
+        android:layout_alignTop="@+id/imageView5"
+        android:layout_alignStart="@+id/imageView5" />
+
+    <Button
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:background="@null"
+        android:textAllCaps="false"
+        android:layout_alignTop="@+id/imageView6"
+        android:layout_toEndOf="@+id/imageView5"
+        android:id="@+id/usemeall" />
+
+
+</RelativeLayout>

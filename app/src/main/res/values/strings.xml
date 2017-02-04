@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ErsuPal</string>
+    <string name="title_activity_menu_principale">Menu</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
+    <string name="title_activity_moduli_activity">Moduli_activity</string>
+    <string name="title_activity_news_activity">News_activity</string>
+    <string name="title_activity_add_meal">Ricarica Pasti</string>
+    <string name="title_activity_use_meal">Utilizza Pasti</string>
+</resources>
