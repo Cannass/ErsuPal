@@ -63,4 +63,30 @@
         android:imeOptions="actionDone"/>
 
 
+    <Button
+        android:text="Dati smarriti?"
+        android:layout_width="150dp"
+        android:layout_height="32dp"
+        android:textSize="10dp"
+        android:textColor="#FFFaFa"
+        android:id="@+id/bntrecupdati"
+        style="?android:attr/borderlessButtonStyle"
+        android:textAllCaps="false"
+        android:layout_below="@+id/login_b"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_marginTop="12dp" />
+
+    <Button
+        android:text="Iscriviti"
+        android:textSize="10dp"
+        android:layout_width="150dp"
+        android:layout_height="32dp"
+        android:textColor="#FFFaFa"
+        android:id="@+id/bntregistrati"
+        style="?android:attr/borderlessButtonStyle"
+        android:textAllCaps="false"
+        android:layout_below="@+id/bntrecupdati"
+        android:layout_alignStart="@+id/bntrecupdati" />
+
+
 </RelativeLayout>

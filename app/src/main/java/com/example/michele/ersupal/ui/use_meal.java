@@ -13,6 +13,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.example.michele.ersupal.R;
 import com.example.michele.ersupal.ui.Moduli_activity;
@@ -20,8 +22,9 @@ import com.example.michele.ersupal.ui.News_activity;
 import com.example.michele.ersupal.ui.menu_principale;
 
 public class use_meal extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener{
 
+    private ImageButton bntcamera;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,14 +32,6 @@ public class use_meal extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -46,6 +41,16 @@ public class use_meal extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        final Intent um = new Intent("android.media.action.IMAGE_CAPTURE");
+
+
+        bntcamera = (ImageButton) findViewById(R.id.imgbntqrcode);
+        bntcamera.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                startActivity(um);
+            }
+        });
+
     }
 
     @Override
@@ -64,6 +69,8 @@ public class use_meal extends AppCompatActivity
         getMenuInflater().inflate(R.menu.use_meal, menu);
         return true;
     }
+
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
