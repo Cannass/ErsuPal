@@ -14,12 +14,17 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.ImageButton;
+import android.widget.Switch;
+import android.widget.Toast;
 
 import com.example.michele.ersupal.R;
 import com.example.michele.ersupal.ui.Moduli_activity;
 import com.example.michele.ersupal.ui.News_activity;
 import com.example.michele.ersupal.ui.menu_principale;
+
+import butterknife.OnClick;
 
 public class use_meal extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener{
@@ -31,18 +36,29 @@ public class use_meal extends AppCompatActivity
         setContentView(R.layout.activity_use_meal);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        Switch nfc;
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
-
+        nfc= (Switch) findViewById(R.id.nfc);
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         final Intent um = new Intent("android.media.action.IMAGE_CAPTURE");
-
+        nfc.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    Toast.makeText(getApplicationContext(), "NFC attivato!",
+                            Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    Toast.makeText(getApplicationContext(), "NFC disattivato!",
+                            Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
         bntcamera = (ImageButton) findViewById(R.id.imgbntqrcode);
         bntcamera.setOnClickListener(new View.OnClickListener(){
@@ -52,6 +68,7 @@ public class use_meal extends AppCompatActivity
         });
 
     }
+
 
     @Override
     public void onBackPressed() {

@@ -4,7 +4,8 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/applogo"
+        android:label="Ersu Pal"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ui.Login">
@@ -44,7 +45,13 @@
             android:name=".ui.use_meal"
             android:label="@string/title_activity_use_meal"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ui.DetailActivity"></activity>
+        <activity android:name=".ui.DetailActivity" />
+        <activity
+            android:name=".ui.Fakecompilazione"
+            android:label="@string/title_activity_fakecompilazione"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ui.StoricoRicariche" />
+        <activity android:name=".ui.StoricoConsumi"></activity>
     </application>
 
 </manifest>

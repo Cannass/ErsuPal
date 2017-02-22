@@ -14,13 +14,107 @@
     tools:showIn="@layout/app_bar_add_meal"
     android:background="#015287">
 
+    <TextView
+
+        android:text="Seleziona i pasti che desideri ricaricare."
+        android:textSize="28dp"
+        android:textAlignment="center"
+        android:textColor="#FFFAfa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/textView13"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:text="10.50€"
+        android:textSize="25dp"
+        android:textColor="#FFFaFA"
+        android:background="@color/colorPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/totale"
+
+        android:layout_alignBaseline="@+id/textView14"
+        android:layout_alignBottom="@+id/textView14"
+        android:layout_toEndOf="@+id/textView14" />
+
+    <EditText
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:text="5"
+        android:textColor="#FFFaFA"
+        android:background="@color/colorPrimary"
+        android:textSize="35dp"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:textAlignment="center"
+        android:id="@+id/textpasti"
+
+        android:layout_below="@+id/textView14"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="39dp" />
+
+    <ImageButton
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:background="@color/colorPrimary"
+        app:srcCompat="@drawable/plus"
+        android:id="@+id/plusButton"
+        android:layout_marginRight="25dp"
+        android:layout_marginEnd="26dp"
 
 
+        android:layout_alignTop="@+id/textpasti"
+        android:layout_alignEnd="@+id/textView13" />
 
+    <ImageButton
+        android:layout_width="65dp"
+        android:background="@color/colorPrimary"
+        android:layout_height="65dp"
+        app:srcCompat="@drawable/minusb"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="26dp"
+        android:id="@+id/minusButton"
+        android:layout_alignTop="@+id/textpasti"
+        android:layout_alignStart="@+id/textView13" />
 
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/confirmbutton150"
+        android:background="@color/colorPrimary"
+        android:layout_marginRight="30dp"
 
+        android:id="@+id/confirm"
+        android:layout_below="@+id/textpasti"
+        android:layout_alignEnd="@+id/plusButton"
+        android:layout_marginEnd="23dp"
+        android:layout_marginTop="76dp" />
 
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:srcCompat="@drawable/cancelbutton150"
+        android:id="@+id/cancel"
+        android:layout_marginStart="23dp"
+        android:layout_alignTop="@+id/confirm"
+        android:layout_alignStart="@+id/minusButton" />
 
-
+    <TextView
+        android:text="Totale:"
+        android:textColor="#FFFaFA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:id="@+id/textView14"
+        android:layout_marginTop="48dp"
+        android:layout_below="@+id/textView13"
+        android:layout_toEndOf="@+id/minusButton" />
 
 </RelativeLayout>

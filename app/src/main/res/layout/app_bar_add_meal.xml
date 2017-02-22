@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/coordinatorLayout"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context="com.example.michele.ersupal.ui.add_meal">
@@ -20,6 +21,39 @@
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <Button
+            android:id="@+id/btnSimpleSnackbar"
+            android:layout_width="fill_parent"
+            android:textColor="#FFFAFA"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Simple Snackbar" />
+
+        <Button
+            android:id="@+id/btnActionCallback"
+            android:layout_width="fill_parent"
+            android:textColor="#FFFAFA"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="With Action Callback" />
+
+        <Button
+            android:id="@+id/btnCustomSnackbar"
+            android:textColor="#FFFAFA"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Custom Color" />
+
+    </LinearLayout>
 
     <include layout="@layout/content_add_meal" />
 

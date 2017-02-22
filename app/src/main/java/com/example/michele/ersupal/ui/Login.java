@@ -2,7 +2,9 @@ package com.example.michele.ersupal.ui;
 
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
+import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,6 +12,7 @@ import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,6 +31,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     private Button login,bntrecupdati,bntregistrati;
     public TextView messageWithLinkTextView;
     private EditText name, password;
+    DatabaseHelp myDb;
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -42,6 +46,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
         bntrecupdati=(Button) findViewById(R.id.bntrecupdati);
         bntrecupdati.setOnClickListener(this);
         bntregistrati=(Button) findViewById(R.id.bntregistrati);
@@ -52,6 +57,9 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         password = (EditText) findViewById(R.id.password);
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
+
+
+        //myDb = new DatabaseHelp(this);
 
 
 
@@ -84,6 +92,9 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
             if (name.getText().toString().isEmpty() && password.getText().toString().isEmpty()) {
                 Toast.makeText(getApplicationContext(), "Non hai inserito nulla",
                         Toast.LENGTH_SHORT).show();
+
+
+
             } else if (password.getText().toString().isEmpty()) {
                 Toast.makeText(getApplicationContext(), "Non hai inserito una password",
                         Toast.LENGTH_SHORT).show();
@@ -152,6 +163,10 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         AppIndex.AppIndexApi.end(client, getIndexApiAction());
         client.disconnect();
+    }
+
+    private void showError() {
+        name.setError("Password and username didn't match");
     }
 }
 

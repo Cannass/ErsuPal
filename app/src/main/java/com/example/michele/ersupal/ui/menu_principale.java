@@ -2,6 +2,7 @@ package com.example.michele.ersupal.ui;
 
 import android.content.Intent;
 import android.graphics.Paint;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -13,12 +14,15 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.example.michele.ersupal.R;
 
 public class menu_principale extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    private Button ameal,umeal;
+    private ImageButton ameal,umeal;
+    private Button vdbottoner,vdbottonec;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,22 +41,36 @@ public class menu_principale extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        Button vdbottoner = (Button) findViewById(R.id.vdstoricor);
+         vdbottoner = (Button) findViewById(R.id.vdstoricor);
         vdbottoner.setPaintFlags(vdbottoner.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
-        Button vdbottonec = (Button) findViewById(R.id.vdstoricoc);
+         vdbottonec = (Button) findViewById(R.id.vdstoricoc);
         vdbottonec.setPaintFlags(vdbottoner.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+
         final Intent am = new Intent(menu_principale.this,add_meal.class);
         final Intent um = new Intent(menu_principale.this,use_meal.class);
+        final Intent rica = new Intent(menu_principale.this,StoricoRicariche.class);
+        final Intent consu = new Intent(menu_principale.this,StoricoConsumi.class);
 
 
-        ameal = (Button) findViewById(R.id.addmeall);
+        vdbottoner.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                startActivity(rica);
+            }
+        });
+
+        vdbottonec.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                startActivity(consu);
+            }
+        });
+        ameal = (ImageButton) findViewById(R.id.addmeal);
         ameal.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 startActivity(am);
             }
         });
 
-        umeal = (Button) findViewById(R.id.usemeall);
+        umeal = (ImageButton) findViewById(R.id.usemeall);
         umeal.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 startActivity(um);
@@ -62,7 +80,14 @@ public class menu_principale extends AppCompatActivity
     }
 
 
+    public void onClick(View v) {
 
+        if(v==vdbottoner){
+            Intent loginIntent = new Intent(this, StoricoRicariche.class);
+            this.startActivity(loginIntent);
+        }
+
+    }
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

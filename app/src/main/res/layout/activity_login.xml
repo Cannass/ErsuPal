@@ -10,8 +10,59 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.michele.ersupal.ui.Login"
-    android:background="@color/colorPrimary">
+    android:background="@color/colorPrimary"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    >
 
+    <Button
+        android:text="Dati smarriti?"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:textSize="16dp"
+        android:textColor="#FFFaFa"
+        android:id="@+id/bntrecupdati"
+        style="?android:attr/borderlessButtonStyle"
+        android:textAllCaps="false"
+        android:layout_below="@+id/login_b"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_marginTop="12dp" />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:srcCompat="@drawable/logo"
+        android:id="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/text_input_layout"
+        android:layout_width="wrap_content"
+
+        android:layout_marginLeft="85dp"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentStart="true">
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="wrap_content"
+
+            android:layout_height="45dp"
+            android:inputType="textPersonName"
+            android:background="#FFFAFA"
+            android:hint="  Username"
+
+            android:ems="10"
+            android:id="@+id/utente"
+            android:layout_below="@+id/imageView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="18dp"
+            android:textAlignment="center"
+            android:imeOptions="actionDone" />
+
+    </android.support.design.widget.TextInputLayout>
 
     <Button
         android:text="Login"
@@ -21,72 +72,52 @@
         android:textAlignment="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="41dp"
         android:id="@+id/login_b"
-        android:layout_below="@+id/password"
+        android:layout_below="@+id/pass_layout"
         android:layout_centerHorizontal="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="45dp"
-        android:inputType="textPassword"
-        android:background="#FFFAFA"
-        android:hint="Password"
-        android:ems="10"
-        android:id="@+id/password"
-        android:layout_centerVertical="true"
-        android:layout_alignStart="@+id/utente"
-        android:textAlignment="center"
-        android:imeOptions="actionDone"/>
-
-    <ImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        app:srcCompat="@drawable/logo"
-        android:id="@+id/imageView"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="45dp"
-        android:inputType="textPersonName"
-        android:background="#FFFAFA"
-        android:hint="Username"
-        android:ems="10"
-        android:id="@+id/utente"
-        android:layout_below="@+id/imageView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="11dp"
-        android:textAlignment="center"
-        android:imeOptions="actionDone"/>
-
-
-    <Button
-        android:text="Dati smarriti?"
-        android:layout_width="150dp"
-        android:layout_height="32dp"
-        android:textSize="10dp"
-        android:textColor="#FFFaFa"
-        android:id="@+id/bntrecupdati"
-        style="?android:attr/borderlessButtonStyle"
-        android:textAllCaps="false"
-        android:layout_below="@+id/login_b"
-        android:layout_alignStart="@+id/imageView"
-        android:layout_marginTop="12dp" />
 
     <Button
         android:text="Iscriviti"
-        android:textSize="10dp"
         android:layout_width="150dp"
-        android:layout_height="32dp"
+        android:layout_height="50dp"
+        android:textSize="16dp"
         android:textColor="#FFFaFa"
         android:id="@+id/bntregistrati"
         style="?android:attr/borderlessButtonStyle"
         android:textAllCaps="false"
         android:layout_below="@+id/bntrecupdati"
         android:layout_alignStart="@+id/bntrecupdati" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/pass_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true"
+
+        app:errorEnabled="true"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/text_input_layout"
+        android:layout_alignParentStart="true">
+
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="wrap_content"
+
+            android:layout_height="45dp"
+            android:inputType="textPassword"
+            android:layout_marginLeft="85dp"
+            android:background="#FFFAFA"
+
+            android:hint="  Password"
+            android:ems="10"
+            android:id="@+id/password"
+            android:layout_centerVertical="true"
+            android:layout_alignStart="@+id/utente"
+            android:textAlignment="center"
+            android:imeOptions="actionDone" />
+
+
+    </android.support.design.widget.TextInputLayout>
 
 
 </RelativeLayout>

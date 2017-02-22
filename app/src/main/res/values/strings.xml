@@ -4,11 +4,48 @@
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string-array name="planets_array">
+        <item>Seleziona Facoltà</item>
+        <item>Medicina</item>
+        <item>Biologia</item>
+        <item>Informatica</item>
+        <item>Matricola non Iscritta</item>
+        <item>Merendine</item>
+        <item>Ingegneria</item>
+        <item>Lettere</item>
+
+    </string-array>
+
+    <string-array name="borse_array">
+        <item>Beneficiario borse</item>
+        <item>Si</item>
+        <item>No</item>
+
+    </string-array>
+    <item name="visible" type="id" />
+    <item name="masked" type="id" />
 
 
-    <string name="title_activity_moduli_activity">Moduli_activity</string>
-    <string name="title_activity_news_activity">News_activity</string>
+    <string name="title_activity_moduli_activity">Moduli</string>
+    <string name="title_activity_news_activity">News</string>
     <string name="title_activity_add_meal">Ricarica Pasti</string>
     <string name="title_activity_use_meal">Utilizza Pasti</string>
     <string name="messageWithLink">This is a message with a link inside!\n<a href="https://www.google.com/">Tap here to open it!</a></string>
+    <string name="title_activity_mod_list_activity">Mod_list_activity</string>
+    <string name="Nome">Nome</string>
+    <string name="Cognome">Cognome</string>
+    <string name="vedi"><u>Vedi storico consumi</u></string>
+    <string name="vedir"><u>Vedi storico ricariche</u></string>
+    <string name="CittaResidenza">CittaResidenza</string>
+    <string name="Cap">Cap</string>
+    <string name="NumerodiTelefono">Numero di Telefono</string>
+    <string name="CreditiConseguiti">Crediti Conseguiti</string>
+    <string name="CodiceFiscale">Codice Fiscale</string>
+    <string name="Annodicorso">Anno di corso</string>
+    <string name="ScuolaSuperiore">Scuola Superiore</string>
+    <string name="AnnoDiploma">Anno Diploma</string>
+    <string name="action_settings">Settings</string>
+    <string name="VotoDiploma">Voto Diploma</string>
+    <string name="title_activity_cancellaistant">Cancellaistant</string>
+    <string name="title_activity_fakecompilazione">Compilazione Modulo</string>
 </resources>
